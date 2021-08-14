@@ -1,0 +1,20 @@
+package com.lokedme;
+
+import java.util.List;
+
+public class LokedMeProj {
+
+	static final String folderPath="F:\\EGDownloads\\Simplilearn stuffs\\live class vedeos\\P-1\\Project(Phase-1)\\(LockedMe.com)-files";
+	public static void main(String[] args) 
+	{
+		
+		List<String> fileNames=FileManaging.getAllFiles(folderPath);
+		
+		for(String f:fileNames)
+		{
+			System.out.println(f);
+		}
+
+	}
+
+}

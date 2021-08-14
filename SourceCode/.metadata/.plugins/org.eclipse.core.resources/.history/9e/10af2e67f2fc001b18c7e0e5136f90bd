@@ -1,0 +1,57 @@
+package com.lokedme;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class LokedMeProj {
+
+	static final String folderPath="F:\\EGDownloads\\Simplilearn stuffs\\live class vedeos\\P-1\\Project(Phase-1)\\(LockedMe.com)-files";
+	public static void main(String[] args) 
+	{
+		
+		List<String> fileNames=FileManaging.getAllFiles(folderPath);
+		//shows all files in folder
+//		for(String s:fileNames)
+//		{
+//			System.out.println(s);
+//		}
+		
+		//create file and content
+		
+		//variable declaration
+		Scanner obj=new Scanner(System.in);
+		String fileName;
+		int linesCount;
+		List<String> content=new ArrayList<String>();
+		
+		//read file name from user
+		System.out.println("enter file name: ");
+		fileName=obj.nextLine();
+		
+		//read number of lines
+		System.out.println("enter how many lines in file ?");
+		linesCount=Integer.parseInt(obj.nextLine());
+		
+		//read lines from user input
+		for(int i=1;i<=linesCount;i++)
+		{
+			System.out.println("enter line "+i+":");
+			content.add(obj.nextLine());
+		}
+		
+		//saving the content into the file
+		boolean isSaved=FileManaging.createFile(folderPath, fileName, content);
+		
+		if(isSaved)
+		{
+			System.out.println("file data saved successfully");
+		}
+		else
+		{
+			System.out.println("some error is there. please contact system adminisstrator");
+		}
+		
+	}
+
+}
