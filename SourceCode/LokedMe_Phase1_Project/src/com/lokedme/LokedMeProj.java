@@ -9,17 +9,70 @@ public class LokedMeProj {
 	static final String folderPath="F:\\EGDownloads\\Simplilearn stuffs\\live class vedeos\\P-1\\Project(Phase-1)\\(LockedMe.com)-files";
 	public static void main(String[] args) 
 	{
+		int go=1;
+		do
+		{	
+		//Variable Declaration
+		Scanner obj=new Scanner(System.in);
+		int choice;
 		
-		System.out.println("************************************************************");
-		System.out.println("\t\tCompany Lockers Pvt. Ltd.");
-		System.out.println("************************************************************");
-		System.out.println("**** 1. Display all files **********************************");
-		System.out.println("**** 2. Add new file ***************************************");
-		System.out.println("**** 3. Delete a file **************************************");
-		System.out.println("**** 4. Search a file **************************************");
-		System.out.println("**** Enter your choice: ************************************");
-		System.out.println("************************************************************");
+		//Menu
+		displayMenu();
 		
+		System.out.println("enter your choice: ");
+		choice=Integer.parseInt(obj.nextLine());
+		
+		switch (choice) 
+		{
+			case 1: getAllFiles();
+			break;
+				
+			case 2: createFile();
+			break;
+			
+			case 3: deleteFile();
+			break;
+			
+			case 4: searchFile();
+			break;
+			
+			case 5: System.exit(0);
+			break;
+			
+		
+		default: System.out.println("Invalid Choice..");
+		break;
+		
+		}
+		}while(go>0);	
+		
+	}
+	
+	/**
+	 * Description: this method is used to display the menu options
+	 * 
+	 * Author: 		Atharv Pratap Singh
+	 * 
+	 * Date:		14/08/2021
+	 */
+	public static void displayMenu()
+	{
+				Scanner obj=new Scanner(System.in);
+//				int ch;
+		
+				System.out.println("************************************************************");
+				System.out.println("\t\tCompany Lockers Pvt. Ltd.");
+				System.out.println("************************************************************");
+				System.out.println("**** 1. Display all files **********************************");
+				System.out.println("**** 2. Add new file ***************************************");
+				System.out.println("**** 3. Delete a file **************************************");
+				System.out.println("**** 4. Search a file **************************************");
+				System.out.println("**** 5. Exit ***********************************************");
+				System.out.println("**** Enter your choice: ************************************");
+				System.out.println("************************************************************");
+//				ch=Integer.parseInt(obj.nextLine());
+//				return ch;
+				
 	}
 	
 	/**
@@ -89,7 +142,7 @@ public class LokedMeProj {
 		}
 		
 		//closing scanner object
-		obj.close();
+//		obj.close();
 	}
 	
 	/**
