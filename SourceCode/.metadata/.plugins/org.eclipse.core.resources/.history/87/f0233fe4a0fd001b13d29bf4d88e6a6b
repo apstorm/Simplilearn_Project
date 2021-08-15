@@ -3,7 +3,6 @@ package com.lokedme;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class FileManaging 
@@ -28,8 +27,6 @@ public class FileManaging
 		{
 			fileNames.add(f.getName());
 		}
-		
-		Collections.sort(fileNames);
 		
 		//return list
 		return fileNames;

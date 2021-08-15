@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class LokedMeProj {
 
-	static final String folderPath=
-	"F:\\EGDownloads\\Simplilearn stuffs\\live class vedeos\\P-1\\Project(Phase-1)\\(LockedMe.com)-files";
+	static final String folderPath="F:\\EGDownloads\\Simplilearn stuffs\\live class vedeos\\P-1\\Project(Phase-1)\\(LockedMe.com)-files";
 	public static void main(String[] args) 
 	{
 		int go=1;
@@ -95,12 +94,12 @@ public class LokedMeProj {
 		else
 		{
 			System.out.println("file list is below: \n");
+		}
 		
 		// Shows all files in folder but acending remains
 		for(String s:fileNames)
 		{
 			System.out.println(s);
-		}
 		}
 	}
 	
